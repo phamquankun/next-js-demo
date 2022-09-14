@@ -1,0 +1,40 @@
+{
+    "header": {
+        "buySPS": "BUY AN SPS",
+        "roadMap": "ROAP MAP",
+        "team": "TEAM",
+        "gallery": "GALLERY",
+        "provenance": "PROVENANCE"
+    },
+    "content": {
+        "section-1": {
+            "title": "WELCOME TO THE ",
+            "title1": "BORED APE YACHT CLUB",
+            "subTitle1": "BAYC is a collection of 10,000 Bored Ape NFTs—unique digital collectibles living on the Ethereum blockchain. Your Bored Ape doubles as your Yacht Club membership card, and grants access to members-only benefits, the first of which is access to THE BATHROOM, a collaborative graffiti board. Future areas and perks can be unlocked by the community through roadmap activation.",
+            "title2": "FAIR DISTRIBUTION",
+            "subTitle2": "(BONDING CURVES ARE A PONZI)",
+            "subTitle3": "There are no bonding curves here. Buying a Bored Ape costs 0.08 ETH. There are no price tiers; BAYC membership costs the same for everyone.",
+            "note": "Note: Thirty apes are being withheld from the sale. These will be used for giveaways, puzzle rewards—and for the creators' BAYC memberships.",
+            "buyAnSPS": {
+                "buyAnSPS": "BUY AN SPS",
+                "title": "The initial sale has sold out. To get your Bored Ape, check out the collection on OpenSea.",
+                "buyOnOpenSea": "BUY AN SPS ON OPENSEA"
+            }
+        },
+        "section-2": {
+            "title": "THE SPECS",
+            "subTitle1": "Each Bored Ape is unique and programmatically generated from over 170 possible traits, including expression, headwear, clothing, and more. All apes are dope, but some are rarer than others.",
+            "subTitle2": "The apes are stored as ERC-721 tokens on the Ethereum blockchain and hosted on IPFS. (See Record and Proof.) Purchasing an ape costs 0.08 ETH.",
+            "subTitle3": "To access members-only areas such as THE BATHROOM, Apeholders will need to be signed into their Metamask Wallet."
+        },
+        "section-3": {
+            "title": "WELCOME TO THE CLUB",
+            "subTitle": "When you buy a Bored Ape, you’re not simply buying an avatar or a provably-rare piece of art. You are gaining membership access to a club whose benefits and offerings will increase over time. Your Bored Ape can serve as your digital identity, and open digital doors for you.",
+            "value1": "10,000 Provably-rare Bored Ape tokens",
+            "value2": "Fair Launch, fair distribution: All apes cost 0.08 ETH",
+            "value3": "Ownership and commercial usage rights given to the consumer over their NFT",
+            "value4": "The Bathroom: A member's-only graffiti board",
+            "value5": "Gain additional benefits through roadmap activations"
+        }
+    }
+}

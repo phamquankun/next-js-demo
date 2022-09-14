@@ -1,0 +1,549 @@
+.ant-layout {
+  min-height: 100vh;
+  width: 100%;
+  background-color: $backColor;
+  &-header {
+    background: none;
+    height: auto;
+    min-width: 100%;
+    padding: 8px 32px;
+    margin: 0 auto;
+    @include mobile {
+      min-width: 100%;
+    }
+    @include tablet {
+      min-width: 100%;
+      padding: 8px 16px;
+    }
+    .header-wrap {
+      display: flex;
+      align-items: center;
+      .header__left {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        padding: 5px 0;
+      }
+      .header__right {
+        flex: 2;
+        padding-right: 10px;
+        @include mobile {
+          flex: 1;
+          text-align: right;
+          padding: 0;
+        }
+        .anticon-menu {
+          display: none;
+          @include mobile {
+            display: block;
+            font-size: 1rem;
+            color: $whiteColor;
+            text-align: right;
+          }
+        }
+        ul {
+          @include mobile {
+            display: none;
+          }
+          display: flex;
+          justify-content: end;
+          align-items: center;
+          padding: 0;
+          margin: 0;
+          gap: 20px;
+          @include tablet {
+            gap: 12px;
+          }
+          & > li {
+            cursor: pointer;
+            color: $whiteColor;
+            list-style-type: none;
+
+            font-size: 10px;
+            font-style: italic;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            caret-color: transparent;
+            text-align: end;
+            transition: 0.15s;
+            &:last-child {
+              &:hover {
+                color: $whiteColor;
+              }
+            }
+            &:hover {
+              color: $primaryColor;
+            }
+            .group-icon-social {
+              position: relative;
+              top: 2px;
+              span {
+                font-size: 16px;
+                padding: 5px 10px;
+
+                &:hover {
+                  color: $primaryColor;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .banner {
+    text-align: center;
+  }
+  &-content {
+    width: 60%;
+    margin: 0 auto;
+    padding: 0 20px;
+    @include mobile {
+      width: 100%;
+      margin: 0;
+    }
+    @include tablet {
+      width: 100%;
+      padding: 0 48px;
+    }
+    .ant-divider {
+      margin: 0;
+      border: 1px solid #3b3b3b;
+    }
+    .section {
+      padding: 50px 0;
+    }
+    .section-1 {
+      &__desc {
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+        @include mobile {
+          flex-direction: column;
+          margin-bottom: 24px;
+        }
+        @include tablet {
+          flex-direction: column;
+          margin-bottom: 24px;
+        }
+        &__value-left {
+          flex: 2;
+          color: $whiteColor;
+
+          .title {
+            font-size: 1.8em;
+            font-weight: 900;
+            font-style: italic;
+            margin-bottom: 15px;
+            display: inline-block;
+          }
+          .sub-title {
+            display: block;
+            width: 86%;
+            font-weight: 400;
+            font-size: 1em;
+            text-align: justify;
+            @include mobile {
+              width: 100%;
+            }
+          }
+        }
+        &__value-right {
+          flex: 1;
+
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+      }
+      &__fair-distribution {
+        margin-bottom: 48px;
+        .fair-title,
+        .ponzi {
+          color: $whiteColor;
+          font-style: italic;
+        }
+        .ponzi {
+          font-size: 1.05em;
+        }
+        .fair-title {
+          color: $primaryColor;
+          font-weight: 500;
+          font-size: 1.6em;
+          margin-bottom: 8px;
+          @include mobile {
+            margin-bottom: 0;
+          }
+        }
+        .bonding-desc {
+          display: flex;
+          justify-content: space-between;
+          gap: 60px;
+          @include mobile {
+            flex-direction: column;
+            gap: 30px;
+          }
+          @include tablet {
+            flex-direction: column;
+            gap: 30px;
+          }
+          &__left {
+            flex: 2;
+            span {
+              display: block;
+              font-style: italic;
+              color: $whiteColor;
+              font-size: 1em;
+              font-weight: 400;
+              width: 86%;
+              text-align: justify;
+              @include mobile {
+                width: 100%;
+              }
+            }
+          }
+          &__right {
+            flex: 1;
+            span {
+              display: block;
+              font-style: italic;
+              color: $whiteColor;
+              font-size: 0.8em;
+              font-weight: 200;
+              text-align: justify;
+            }
+          }
+        }
+      }
+      &__buy-an-ape {
+        background-color: $primaryColor;
+        padding: 24px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include mobile {
+          flex-direction: column;
+          gap: 10px;
+        }
+        @include tablet {
+          flex-direction: column;
+        }
+        & > p,
+        & > h3,
+        & > .btn-buy {
+          margin: 0;
+          flex: 1;
+          text-align: center;
+        }
+
+        h3 {
+          font-size: 1.5em;
+          font-weight: 800;
+          font-style: italic;
+        }
+        p {
+          text-align: justify;
+          font-size: 1em;
+          color: $backColor;
+        }
+        .btn-buy {
+          a {
+            display: inline-block;
+            background-color: $backColor;
+            border-radius: 8px;
+            width: 230px;
+            padding: 12px;
+            color: $primaryColor;
+            font-weight: 600;
+            @include mobile {
+              min-width: 250px;
+            }
+            @include tablet {
+              min-width: 250px;
+            }
+            &:hover {
+              background-color: $whiteColor !important;
+              color: $backColor;
+            }
+          }
+        }
+      }
+    }
+    .section-2 {
+      display: flex;
+      justify-content: space-between;
+      @include mobile {
+        flex-direction: column;
+        gap: 10px;
+      }
+      @include tablet {
+        flex-direction: column;
+        gap: 20px;
+      }
+      &__left {
+        flex: 2;
+        h2,
+        p {
+          color: $whiteColor;
+        }
+        p {
+          text-align: justify;
+          width: 85%;
+          @include mobile {
+            width: 100%;
+          }
+        }
+      }
+      &__right {
+        flex: 1;
+        text-align: right;
+        @include mobile {
+          text-align: center;
+        }
+        @include tablet {
+          text-align: center;
+          span {
+            width: 100% !important;
+            height: 672px !important;
+          }
+        }
+      }
+    }
+    .section-3 {
+      .sub-title {
+        width: 78%;
+        @include mobile {
+          width: 100%;
+        }
+        @include tablet {
+          width: 100%;
+        }
+      }
+      .member-group {
+        display: flex;
+        justify-content: space-between;
+        @include mobile {
+          flex-direction: column;
+        }
+        &__item {
+          text-align: center;
+
+          @include mobile {
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+            align-items: center;
+          }
+          p {
+            max-width: 150px;
+            @include mobile {
+              max-width: 200px;
+            }
+          }
+        }
+      }
+    }
+    .section-4 {
+      &__value {
+        display: flex;
+        justify-content: space-between;
+        @include mobile {
+          flex-direction: column;
+        }
+        @include tablet {
+          flex-direction: column;
+        }
+        &__left {
+          .info-team {
+            margin-top: 16px;
+            &__item {
+              margin-bottom: 16px;
+              & > span:first-child {
+                color: $primaryColor;
+                font-weight: 600;
+              }
+              & > span:last-child {
+                font-style: italic;
+              }
+            }
+          }
+        }
+        &__right {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: end;
+          gap: 15px;
+          @include tablet {
+            justify-content: space-between;
+          }
+          @include mobile {
+            gap: 10px;
+            justify-content: space-between;
+          }
+        }
+      }
+      &__smart-contruct {
+        margin-top: 50px;
+        text-align: center;
+
+        & > span {
+          word-break: break-word !important;
+          &:first-child {
+            font-weight: 600;
+          }
+          &:last-child {
+            color: $primaryColor;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  &-footer {
+    margin: 0 70px;
+    border-top: 1px solid $whiteColor;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mobile {
+      flex-direction: column;
+    }
+    .footer__input {
+      flex: 1;
+
+      display: flex;
+      flex-direction: column;
+      @include mobile {
+        text-align: center;
+      }
+      & > span:first-child {
+        font-weight: 600;
+        font-size: 13px;
+        font-style: italic;
+        color: $whiteColor;
+        margin-bottom: 10px;
+        display: inline-block;
+      }
+      .ant-input-group-wrapper {
+        .ant-input-wrapper {
+          .ant-input {
+            background-color: #272626;
+            border: none;
+            color: $whiteColor;
+            font-style: italic;
+            &:hover,
+            &:focus {
+              outline: none;
+              box-shadow: none;
+            }
+            &::placeholder {
+              font-style: italic;
+              font-size: 12px;
+            }
+          }
+          .ant-input-group-addon {
+            cursor: pointer;
+            border: none;
+            background-color: #4b4a4a;
+            color: $whiteColor;
+            .arrow-right {
+              color: $whiteColor;
+            }
+            &:hover {
+              background-color: $primaryColor;
+            }
+          }
+        }
+      }
+    }
+    .footer__image {
+      flex: 2;
+      text-align: center;
+    }
+    .footer__contact {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      text-align: end;
+      gap: 10px;
+      @include mobile {
+        text-align: center;
+      }
+      &__social-media {
+        span {
+          color: $whiteColor;
+          font-size: 16px;
+          padding: 10px;
+
+          &:last-child {
+            padding-right: 0;
+            @include mobile {
+              padding-right: 10px;
+            }
+          }
+        }
+      }
+      & > span,
+      & > a {
+        color: $whiteColor;
+        font-size: 10px;
+      }
+      & > a {
+        text-decoration: underline;
+        color: $primaryColor;
+
+        &:hover {
+          color: $whiteColor;
+        }
+      }
+    }
+  }
+  .last-line {
+    background-color: $primaryColor;
+    height: 15px;
+    width: 100%;
+  }
+}
+
+.menu-responsive {
+  .ant-drawer-content-wrapper {
+    width: 210px !important;
+    .ant-drawer-content {
+      .ant-drawer-wrapper-body {
+        .ant-drawer-header {
+          display: none;
+        }
+        .ant-drawer-body {
+          background-color: $backColor;
+          & > p {
+            font-family: "Montserrat", sans-serif;
+            font-style: italic;
+            color: $whiteColor;
+            &:first-child {
+              text-align: center;
+              font-weight: 600;
+              color: $primaryColor;
+            }
+            &:hover {
+              color: $primaryColor;
+            }
+          }
+          .group-icon-social {
+            text-align: center;
+            span {
+              color: $whiteColor;
+              padding: 10px;
+
+              &:hover {
+                color: $primaryColor;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
