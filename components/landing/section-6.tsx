@@ -1,7 +1,4 @@
-import { Divider } from "antd";
-import { TFunction } from "next-i18next";
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import {
   DESKTOP_WIDTH,
@@ -9,10 +6,8 @@ import {
   MOBILE_WIDTH_M,
   TABLET_WIDTH,
 } from "../../const";
-interface SectionOneProps {
-  t: TFunction;
-}
-export default function SectionOne({ t }: SectionOneProps) {
+interface SectionSixProps {}
+export default function SectionSix(props: SectionSixProps) {
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
@@ -42,19 +37,26 @@ export default function SectionOne({ t }: SectionOneProps) {
 
   return (
     <>
-      <div className="section-1 section">
-        <div className="section-1__desc">
-          <div className="section-1__desc__value-left">
-            <span className="title">
-              {`${t("content.section-1.title")}`}
-              <br /> {`${t("content.section-1.title1")}`}
-            </span>
-            <br />
-            <span className="sub-title">
-              {`${t("content.section-1.subTitle1")}`}
-            </span>
+      <div className="section section-6" id="section-6">
+        <div className="section-6__value">
+          <div className="section-6__value__left">
+            <h2 className="common-title">THE TEAM</h2>
+            <p className="common-p">
+              BAYC was created by four friends who set out to make some dope
+              apes, test our skills, and try to build something (ridiculous).
+            </p>
+            <div className="info-team">
+              {Array.from({ length: 4 }).map((_, index) => (
+                <div className="info-team__item" key={index}>
+                  <span className="common-p ">GARGAMEL.</span>
+                  <span className="common-p ">
+                    STARCRAFT OBSESSED. EATS SMURFS.
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="section-1__desc__value-right">
+          <div className="section-6__value__right">
             <Image
               alt=""
               src="https://ik.imagekit.io/bayc/assets/ape1.png"
@@ -81,33 +83,13 @@ export default function SectionOne({ t }: SectionOneProps) {
             />
           </div>
         </div>
-        <div className="section-1__fair-distribution">
-          <h3 className="fair-title">
-            {t("content.section-1.title2") as string}
-          </h3>
-          <h4 className="ponzi">{`${t("content.section-1.subTitle2")}`}</h4>
-          <div className="bonding-desc">
-            <div className="bonding-desc__left">
-              <span>{`${t("content.section-1.subTitle3")}`}</span>
-            </div>
-            <div className="bonding-desc__right">
-              <span>{`${t("content.section-1.note")}`}</span>
-            </div>
-          </div>
-        </div>
-        <div className="section-1__buy-an-ape">
-          <h3>{`${t("content.section-1.buyAnSPS.buyAnSPS")}`}</h3>
-          <p className="common-p">{`${t(
-            "content.section-1.buyAnSPS.title"
-          )}`}</p>
-          <div className="btn-buy">
-            <Link href="#">
-              <a>{`${t("content.section-1.buyAnSPS.buyOnOpenSea")}`}</a>
-            </Link>
-          </div>
+        <div className="section-6__smart-contruct">
+          <span className="common-p">VERIFIED SMART CONTRACT ADDRESS: </span>
+          <span className="common-p">
+            0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D
+          </span>
         </div>
       </div>
-      <Divider />
     </>
   );
 }

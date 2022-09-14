@@ -44,13 +44,10 @@ export default function Header(props: HeaderProps) {
   const handleNav = (item: string) => {
     switch (item) {
       case "ROADMAP":
-        router.push("#section-2");
+        router.push("#section-4");
         break;
       case "TEAM":
-        router.push("#section-4");
-        break;
-      case "MEMBERS":
-        router.push("#section-4");
+        router.push("#section-6");
         break;
       default:
         break;

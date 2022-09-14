@@ -8,16 +8,26 @@
     min-width: 100%;
     padding: 8px 32px;
     margin: 0 auto;
-    @include mobile {
-      min-width: 100%;
-    }
     @include tablet {
-      min-width: 100%;
       padding: 8px 16px;
     }
     .header-wrap {
       display: flex;
       align-items: center;
+      width: 58%;
+      margin: 0 auto;
+      @include mobile {
+        width: 100%;
+      }
+      @include tablet {
+        width: 100%;
+      }
+      @include desktop-lg {
+        width: 100%;
+      }
+      @include desktop-xl {
+        width: 85%;
+      }
       .header__left {
         display: flex;
         align-items: center;
@@ -93,25 +103,47 @@
   }
   .banner {
     text-align: center;
+    @include mobile {
+      padding: 0;
+    }
+    @include tablet {
+      padding: 24px;
+    }
   }
   &-content {
     width: 60%;
     margin: 0 auto;
-    padding: 0 20px;
     @include mobile {
       width: 100%;
       margin: 0;
     }
     @include tablet {
       width: 100%;
-      padding: 0 48px;
+    }
+    @include desktop-lg {
+      width: 100%;
+    }
+    @include desktop-xl {
+      width: 100%;
     }
     .ant-divider {
       margin: 0;
       border: 1px solid #3b3b3b;
     }
     .section {
-      padding: 50px 0;
+      padding: 50px 20px;
+      @include tablet {
+        padding: 50px 48px;
+      }
+      @include mobile {
+        padding: 50px 24px;
+      }
+      @include desktop-lg {
+        padding: 50px 56px;
+      }
+      @include desktop-xl {
+        padding: 50px 180px;
+      }
     }
     .section-1 {
       &__desc {
@@ -124,6 +156,9 @@
         }
         @include tablet {
           flex-direction: column;
+          margin-bottom: 24px;
+        }
+        @include desktop-lg {
           margin-bottom: 24px;
         }
         &__value-left {
@@ -155,6 +190,12 @@
           justify-content: space-between;
           flex-wrap: wrap;
           gap: 10px;
+          @include desktop-lg {
+            span {
+              width: 134px !important;
+              height: 134px !important;
+            }
+          }
         }
       }
       &__fair-distribution {
@@ -346,6 +387,76 @@
       }
     }
     .section-4 {
+      &__content {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include tablet {
+          flex-direction: column;
+          gap: 20px;
+        }
+        @include mobile {
+          flex-direction: column;
+          gap: 20px;
+        }
+        &__left {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 20px;
+          .item {
+            display: flex;
+            gap: 30px;
+            .label {
+              min-width: 100px;
+              p {
+                color: $primaryColor;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+        &__right {
+          text-align: right;
+          flex: 1;
+        }
+      }
+    }
+    .section-5 {
+      &__content {
+        display: flex;
+        align-items: center;
+        gap: 100px;
+        @include mobile {
+          flex-direction: column;
+          gap: 10px;
+        }
+        &__right {
+          @include mobile {
+            width: 100%;
+          }
+          .ant-btn {
+            width: 250px;
+            height: 50px;
+            border: none;
+            border-radius: 8px;
+            background-color: $primaryColor;
+            margin: 10px;
+            @include mobile {
+              margin: 10px 0;
+              width: 100%;
+            }
+            span {
+              font-size: 1rem;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+    .section-6 {
       &__value {
         display: flex;
         justify-content: space-between;

@@ -1,87 +1,97 @@
+import { Divider } from "antd";
+import { TFunction } from "next-i18next";
 import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
-interface SectionFourProps {}
-export default function SectionFour(props: SectionFourProps) {
-  const [windowWidth, setWindowWidth] = useState(0);
 
-  useEffect(() => {
-    setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", (e) => {
-      setWindowWidth(window.innerWidth);
-    });
-  }, []);
-
-  const imageWidth = useMemo(() => {
-    if (windowWidth < 480 && windowWidth > 375) {
-      return {
-        width: 181,
-      };
-    }
-    if (windowWidth <= 375) {
-      return {
-        width: 151,
-      };
-    }
-    if (windowWidth >= 768 && windowWidth < 1024) {
-      return {
-        width: 328,
-      };
-    }
-  }, [windowWidth]);
-
+interface SectionFourProps {
+  t: TFunction;
+}
+const listLabel = [
+  {
+    label: "10%",
+    value: "We pay back our moms.",
+    isCompleted: true,
+  },
+  {
+    label: "20%",
+    value:
+      "We release the Caged Apes. 5 Caged Apes (tokens held back from the sale) are airdropped to random Apeholders.",
+    isCompleted: true,
+  },
+  {
+    label: "30%",
+    value:
+      "BAYC gets its own YouTube channel, BAYC LoFi Radio - Beats to Ape into Shitcoins To.",
+    isCompleted: true,
+  },
+  {
+    label: "40%",
+    value:
+      "Member-Exclusive BAYC Merch Store gets unlocked, featuring Limited Edition tees, hoodies, and other goodies.",
+    isCompleted: true,
+  },
+  {
+    label: "60%",
+    value:
+      "The clubhouse image becomes interactive and the Mysterious Note becomes legible, beginning a treasure hunt. The first to solve the mystery will be rewarded 5 ETH and a Bored Ape.",
+    isCompleted: true,
+  },
+  {
+    label: "80%",
+    value: "The Bored Ape liquidity pool is initiated..",
+    isCompleted: true,
+  },
+  {
+    label: "100%",
+    value:
+      "The Mutant Ape (NFT Breeding) Arcade Machine gets ﬁxed. And we cook up new ways to ape with our friends.",
+    isCompleted: true,
+  },
+];
+export default function SectionFour({ t }: SectionFourProps) {
   return (
-    <div className="section section-4" id="section-4">
-      <div className="section-4__value">
-        <div className="section-4__value__left">
-          <h2 className="common-title">THE TEAM</h2>
+    <>
+      <div className="section-4 section" id="section-4">
+        <div className="section-4__title">
+          <h2 className="common-title">ROADMAP ACTIVATIONS</h2>
+        </div>
+        <div className="section-4__sub-title">
+          <p className="common-p">We’re in this for the long haul.</p>
           <p className="common-p">
-            BAYC was created by four friends who set out to make some dope apes,
-            test our skills, and try to build something (ridiculous).
+            We’ve set up some goalposts for ourselves. Once we hit a target sell
+            through percentage, we will begin to work on realizing the stated
+            goal.
           </p>
-          <div className="info-team">
-            {Array.from({ length: 4 }).map((_, index) => (
-              <div className="info-team__item" key={index}>
-                <span className="common-p ">GARGAMEL.</span>
-                <span className="common-p ">
-                  STARCRAFT OBSESSED. EATS SMURFS.
-                </span>
+        </div>
+        <div className="section-4__content">
+          <div className="section-4__content__left">
+            {listLabel.map((item, index) => (
+              <div key={index} className="item">
+                <div className="label">
+                  <p className="common-p">{item.label}</p>
+                </div>
+                <div className="value">
+                  <p
+                    className={`common-sub-p ${
+                      item.isCompleted ? "line-through" : ""
+                    }`}
+                  >
+                    {item.value}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
-        </div>
-        <div className="section-4__value__right">
-          <Image
-            alt=""
-            src="https://ik.imagekit.io/bayc/assets/ape1.png"
-            width={imageWidth?.width || 164}
-            height={imageWidth?.width || 164}
-          />
-          <Image
-            alt=""
-            src="https://ik.imagekit.io/bayc/assets/ape2.png"
-            width={imageWidth?.width || 164}
-            height={imageWidth?.width || 164}
-          />
-          <Image
-            alt=""
-            src="https://ik.imagekit.io/bayc/assets/ape3.png"
-            width={imageWidth?.width || 164}
-            height={imageWidth?.width || 164}
-          />
-          <Image
-            alt=""
-            src="https://ik.imagekit.io/bayc/assets/ape4.png"
-            width={imageWidth?.width || 164}
-            height={imageWidth?.width || 164}
-          />
+          <div className="section-4__content__right">
+            <Image
+              alt=""
+              src="https://ik.imagekit.io/bayc/assets/ape1.png"
+              width={333}
+              height={333}
+            />
+          </div>
         </div>
       </div>
-      <div className="section-4__smart-contruct">
-        <span className="common-p">VERIFIED SMART CONTRACT ADDRESS: </span>
-        <span className="common-p">
-          0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D
-        </span>
-      </div>
-    </div>
+      <Divider />
+    </>
   );
 }

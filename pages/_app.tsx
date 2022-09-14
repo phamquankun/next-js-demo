@@ -4,7 +4,6 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import LayoutLanding from "../components/layout";
 import "../styles/app.scss";
-import "../public/styles/mixin.scss";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export async function getStaticProps({ locale }: any) {
